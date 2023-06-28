@@ -1,0 +1,46 @@
+name: tama
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+  - r
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=4.5=1_gnu
+  - argcomplete=1.11.1=py_0
+  - argh=0.26.2=py27_0
+  - bzip2=1.0.8=h7b6447c_0
+  - c-ares=1.18.1=h7f8727e_0
+  - ca-certificates=2022.07.19=h06a4308_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - curl=7.80.0=h7f8727e_0
+  - gffutils=0.10.1=pyh864c0ab_1
+  - krb5=1.19.2=hac12032_0
+  - libcurl=7.80.0=h0b77cf5_0
+  - libdeflate=1.0=h14c3975_1
+  - libedit=3.1.20210910=h7f8727e_0
+  - libev=4.33=h7f8727e_1
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=9.3.0=h5101ec6_17
+  - libgomp=9.3.0=h5101ec6_17
+  - libnghttp2=1.46.0=hce63b2e_0
+  - libssh2=1.9.0=h1ba5d50_1
+  - libstdcxx-ng=9.3.0=hd4cf53a_17
+  - ncurses=6.3=h7f8727e_2
+  - openssl=1.1.1q=h7f8727e_0
+  - pip=19.3.1=py27_0
+  - pyfaidx=0.7.0=pyh5e36f6f_0
+  - pysam=0.15.3=py27hda2845c_1
+  - python=2.7.18=ha1903f6_2
+  - readline=8.1.2=h7f8727e_1
+  - setuptools=44.0.0=py27_0
+  - simplejson=3.8.1=py27_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.37.2=hc218d9a_0
+  - tk=8.6.11=h1ccaba5_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.5=h7b6447c_0
+  - zlib=1.2.11=h7f8727e_4
+  - pip:
+    - biopython==1.76
+    - numpy==1.16.6
