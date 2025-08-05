@@ -1,0 +1,37 @@
+{
+    "full-splice_match": [
+        {
+            "perc_A_downstream_TTS":[0,79]
+        }
+    ],
+    "rest": [
+        {
+            "perc_A_downstream_TTS":[0,69],
+            "RTS_stage":"FALSE",
+            "ratio_TSS" : 1.1,
+            "dist_to_polyA_site" : [-50,50],
+            "exons" : 2
+        },
+        {
+            "perc_A_downstream_TTS":[0,69],
+            "RTS_stage":"FALSE",
+            "ratio_TSS" : 1.1,
+            "polyA_dist" : [-50,50],
+            "exons" : 2
+        },
+        {   
+            "perc_A_downstream_TTS":[0,69],
+            "RTS_stage":"FALSE",
+            "dist_to_CAGE_peak" : [-1000,1000],
+            "dist_to_polyA_site" : [-50,50],
+            "exons" : 2
+        },
+        {   
+            "perc_A_downstream_TTS":[0,69],
+            "RTS_stage":"FALSE",
+            "dist_to_CAGE_peak":[-1000,1000],
+            "polyA_dist" : [-50,50],
+            "exons" : 2
+        }
+     ]
+}

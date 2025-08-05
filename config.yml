@@ -1,0 +1,33 @@
+sample_sheet: "samples.tsv"
+outdir: "/hpc-home/kudashev/Capture_results"
+
+genome: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/references/refdata-gex-GRCh38-2024-A/fasta/genome.fa"
+ref_juncs: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/references/gencode.v46.annotation.annotated_juncs.bed"
+gtf: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/references/gencode.v46.annotation.gtf"
+genedb: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/references/gencode.v46.annotation.db"
+probes_gtf: "/ei/projects/8/8289c66d-2d56-4706-a307-5a9a3eb3747e/data/Capture/Capture_experiment_data/all_probes.gtf"
+
+# Software paths
+isoquant: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/SK/annotation/tools/isoquant"
+sqanti3: "/ei/projects/8/8289c66d-2d56-4706-a307-5a9a3eb3747e/data/tools/SQANTI3-5.2.1"
+samtools: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/SK/annotation/tools/samtools/samtools-1.20.img"
+twopasstools: "/ei/projects/3/3e4d9f24-546b-4e65-b3bd-e14aa572cf87/data/SK/annotation/tools/2passtools/2passtools.sif"
+
+# Conda environment for python scripts
+lr_analysis_env: "/ei/software/testing/python_miniconda/4.10.3_py3.9_sk/x86_64/envs/lr_analysis"
+# Restrander
+restrander_config: "restrander_configs/PCB109.json"
+
+# Input FASTQ directory (for merge_filter_fastq)
+raw_fastq_dir: "/ei/projects/1/17339e77-1a5d-440a-abde-70e615a0f98b/data/raw/20241031_IPSCs/_1/20241031_1631_P2S-00660-A_PAY86305_d9cfe10b/fastq_pass"
+
+# Software parameters
+tama_window_size: 10000000
+max_intron_size: "500k"
+
+sqanti_input: "tama" # or "isoquant"
+# SQANTI3 reference files
+polyA_motif: "sqanti3_references/mouse_and_human.polyA_motif.txt"
+polyA: "sqanti3_references/atlas.clusters.2.0.GRCh38.96.bed"
+CAGE: "sqanti3_references/human.refTSS.hg38.4.1.bed"
+sqanti_rules: "sqanti3_references/FSM_rules.json"

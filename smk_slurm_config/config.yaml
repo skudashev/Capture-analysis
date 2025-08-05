@@ -1,0 +1,94 @@
+executor: slurm
+
+default-resources:
+  slurm_account: "ei"
+  slurm_extra: "'--mail-type=FAIL --mail-user=sofia.kudasheva@earlham.ac.uk -o logs/smk.%N.%j.out -e logs/smk.%N.%j.err'"
+  slurm_partition: "ei-medium"
+
+printshellcmds: true
+jobs: 100
+restart-times: 3
+latency-wait: 60
+rerun-incomplete: true
+use-conda: false
+
+set-resources:
+  merge_filter_fastq:
+    runtime: "2h"
+    mem_mb: 8000
+    slurm_partition: "ei-short"
+
+  restrander:
+    runtime: "1h"
+    mem_mb: 4000
+    slurm_partition: "ei-short"
+
+  map_to_genome:
+    runtime: "72h"
+    mem_mb: 100000
+    slurm_partition: "ei-medium"
+
+  score_junctions:
+    runtime: "12h"
+    mem_mb: 120000
+    slurm_partition: "ei-short"
+
+  merge_junctions:
+    runtime: "6h"
+    mem_mb: 16000
+    slurm_partition: "ei-short"
+
+  twopass_map_to_genome:
+    runtime: "72h"
+    mem_mb: 100000
+    slurm_partition: "ei-medium"
+
+  filter_read_ids:
+    runtime: "12h"
+    mem_mb: 80000
+    slurm_partition: "ei-short"
+
+  filter_bam_reads:
+    runtime: "3h"
+    mem_mb: 8000
+    slurm_partition: "ei-short"
+
+  merge_filtered_bams:
+    runtime: "5h"
+    mem_mb: 16000
+    slurm_partition: "ei-short"
+
+  split_merged_bam:
+    runtime: "48h"
+    mem_mb: 80000
+    slurm_partition: "ei-medium"
+
+  tama_collapse:
+    runtime: "120h"
+    mem_mb: 40000
+    slurm_partition: "ei-medium"
+
+  isoquant_labels:
+    runtime: "1h"
+    mem_mb: 2000
+    slurm_partition: "ei-short"
+
+  isoquant_collapse:
+    runtime: "120h"
+    mem_mb: 100000
+    slurm_partition: "ei-long"
+
+set-threads:
+  merge_filter_fastq: 12
+  restrander: 4
+  map_to_genome: 20
+  score_junctions: 12
+  merge_junctions: 12
+  twopass_map_to_genome: 20
+  filter_read_ids: 4
+  filter_bam_reads: 4
+  merge_filtered_bams: 4
+  split_merged_bam: 4
+  tama_collapse: 2
+  isoquant_labels: 1
+  isoquant_collapse: 24

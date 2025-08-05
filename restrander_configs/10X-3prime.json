@@ -1,0 +1,20 @@
+{
+    "name": "10X 3'",
+    "description": "Uses 10X 3' primers.",
+    "pipeline": [
+        {
+            "type": "poly",
+            "tail-length": 12,
+            "search-size": 200
+        },
+        {
+            "type": "primer",
+            "tso": "AAGCAGTGGTATCAACGCAGAGTAC",
+            "rtp": "CTACACGACGCTCTTCCGATCT",
+            "report-artefacts": true
+        }
+    ],
+    "silent": false,
+    "exclude-unknowns": true,
+    "error-rate": 0.25
+}
